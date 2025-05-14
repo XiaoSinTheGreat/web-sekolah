@@ -1,0 +1,516 @@
+/* === GLOBAL STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --blue-dark: #003366;
+    --blue-light: #5B9BD5;
+    --gold: #FFD700;
+    --white: #FFFFFF;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* === NAVBAR === */
+nav {
+    background-color: var(--blue-dark);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-right: auto;
+}
+
+.logo-container img{
+  width: 110px;
+  height: 110px;
+  margin: auto;
+}
+
+.logo {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-left: auto;
+  }
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+
+
+/* === HERO SECTION === */
+.hero {
+    background: linear-gradient rgba(0, 51, 102, 0.7);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 5%;
+}
+
+.hero img{
+    background: no-repeat center/cover;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--gold);
+    color: var(--blue-dark);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Profil Kepala Sekolah */
+.kepsek {
+    background: #f8f9fa;
+    padding: 4rem 0;
+  }
+  
+  .profile-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  .profile-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 2rem;
+    max-width: 1000px;
+  }
+  
+  .profile-img {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .profile-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .profile-img img:hover {
+    transform: scale(1.03);
+  }
+  
+  .profile-desc {
+    flex: 1.5;
+    margin-bottom: auto;
+    margin-left: auto;
+  }
+  
+  .profile-desc h3 {
+    color: #003366;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .position {
+    color: #5B9BD5;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  
+  .bio {
+    line-height: 1.6;
+  }
+  
+  .bio ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .profile-content {
+      flex-direction: column;
+    }
+    
+    .profile-img {
+      max-width: 300px;
+    }
+  }
+
+/* === JURUSAN SECTION === */
+.section-title {
+    text-align: center;
+    margin: 3rem 0;
+    color: var(--blue-dark);
+}
+
+.jurusan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 5%;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    padding: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--blue-light);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    margin-bottom: 1rem;
+    color: var(--blue-dark);
+}
+
+/* === ORGANISASI SECTION === */
+.org-section {
+    padding: 0 5%;
+    margin-bottom: 4rem;
+}
+
+.org-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.org-card h3 {
+    color: var(--blue-dark);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* === ORGANIZATION STRUCTURE === */
+.container h1{
+        text-align: center;
+        color: #003366;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #003366;
+}
+
+.org-structure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+
+/* OSIS Box */
+.osis {
+    background-color: #003366;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+    margin-bottom: 40px;
+}
+
+/* Connecting Line */
+.connector {
+    width: 2px;
+    height: 50px;
+    background-color: #003366;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ekskul Container */
+.ekskul-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+/* Individual Ekskul Box */
+.ekskul {
+    background-color: #5B9BD5;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    width: 150px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.ekskul:hover {
+    transform: translateY(-5px);
+    background-color: #4a8bc9;
+}
+
+/* Connecting Lines to Ekskul */
+.ekskul::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+    background-color: #003366;
+    transform: translateX(-50%);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .ekskul-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .ekskul {
+        width: 120px;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Section Pendaftaran */
+.daftar-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .daftar-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,51,102,0.1);
+  }
+  
+  .form-daftar {
+    display: grid;
+    gap: 1.5rem;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #003366;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .btn-daftar {
+    background: #003366;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .btn-daftar:hover {
+    background: #002244;
+    transform: translateY(-3px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .daftar-container {
+      margin: 0 1rem;
+      padding: 1.5rem;
+    }
+  }
+
+/* === FOOTER === */
+footer {
+    background-color: var(--blue-dark);
+    color: var(--white);
+    padding: 3rem 5%;
+}
+
+.footer-content {
+  background: var(--blue-dark);
+  padding: 2rem 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  border-radius: 10px 10px 0 0; /* Sudut atas melengkung */
+}
+
+.map {
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.footer-info{
+  padding: 1rem;
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.footer-info h3{
+  color: var(--gold);
+}
+
+.footer-info p{
+  color: var(--white);
+}
+
+.footer-info .social i{
+  color: var(--white);
+  font-size: 18px;
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.footer-info .social i:hover{
+  color: var(--gold);
+  transform: rotate(360deg);
+}
+
+.credit {
+  width: 100vw;           /* Lebar sesuai viewport */
+  margin-left: -50vw;     /* Counter padding body */
+  left: 50%;              /* Posisi tepat di tengah */
+  position: relative;     /* Required untuk offset */
+  background: var(--white);    /* Warna biru sekolah */
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.credit p{
+  color: var(--blue-dark);
+}
+
+.credit a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .footer-main {
+    grid-template-columns: 1fr;
+   }
+  
+  .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
